@@ -13,13 +13,18 @@
         <h1>{{titulo}}</h1>
 
         <ul>
-            <li v-for="fruta of frutas">{{fruta.nombre}} - {{fruta.cantidad}}</li>
-            <!--<span v-if = "fruta.cantidad ===0">-Sin stock</span> -->
-            <span v-if="fruta.cantidad === 10"> - SIN STOCK</span>
+            <li v-for="fruta of frutas">
+                {{fruta.nombre}} - {{fruta.cantidad}}
+            
+            <span v-if="fruta.cantidad === 0"> - SIN STOCK</span> 
+            </li>
+
+
+            
         </ul>
 
 
-    </div>
+    </div>  
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="01.js"></script>
