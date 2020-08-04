@@ -15,7 +15,7 @@
         <ul>
             <li v-for="fruta of frutas">{{fruta.nombre}} - {{fruta.cantidad}}</li>
             <!--<span v-if = "fruta.cantidad ===0">-Sin stock</span> -->
-          
+            <div v-if = "frutas.cantidad === 0"> - SIN STOCK</div>
         </ul>
 
 
