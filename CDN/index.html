@@ -13,7 +13,9 @@
         <h1>{{titulo}}</h1>
 
         <ul>
-            <li v-for="fruta of frutas">{{fruta}}</li>
+            <li v-for="fruta of frutas">{{fruta.nombre}} - {{fruta.cantidad}}</li>
+            <!--<span v-if = "fruta.cantidad ===0">-Sin stock</span> -->
+          
         </ul>
 
 

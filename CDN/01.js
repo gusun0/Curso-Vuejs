@@ -3,7 +3,12 @@ const app = new Vue(
         el:  '#app',
         data:{
            titulo: 'hola mundo con vue',
-           frutas: ['Manzana', 'Pera','Platano']
+           frutas: [
+                {nombre: 'Pera', cantidad: 0},
+                {nombre: 'Manzana', cantidad: 10},
+                {nombre: 'Naranja', cantidad: 20}
+
+           ]
         }
 
     })
