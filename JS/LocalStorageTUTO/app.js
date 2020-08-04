@@ -1,3 +1,4 @@
+// CRUD CON VAINILLA JS
 //variblesglbales
 const BtnBotones = document.querySelector('#BtnBotones');
 const botones = document.querySelector('#botones');
