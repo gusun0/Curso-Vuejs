@@ -1,6 +1,7 @@
 
 
 var documento = document.querySelector('#contenido');
+
 function traer(){
 
     fetch('texto.txt')
@@ -11,4 +12,6 @@ function traer(){
         console.log(data);
         documento.innerHTML = `${data}`;
     })
+
+    //documento.innerHTML = `ss`;
 }
