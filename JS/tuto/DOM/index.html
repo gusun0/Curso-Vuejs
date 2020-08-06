@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>USANDO DOM</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">
+            Hola, soy un documento en html
+        </h1>
+        <p id="parrafo" class="lead">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nobis dolore labore iure! Cumque illo voluptatibus magni, quidem eligendi porro soluta minima voluptatem nemo non enim iusto, sapiente facere aspernatur.
+        </p>
+        <p id="parrafo" class="lead">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nobis dolore labore iure! Cumque illo voluptatibus magni, quidem eligendi porro soluta minima voluptatem nemo non enim iusto, sapiente facere aspernatur.
+        </p>
+
+        <button id="boton" class="btn btn-primary">Cambiar</button>
+    </div>
+
+    <script>
+
+        var parrafo =  document.getElementsByClassName('lead');
+        // console.log(parrafo[1]);
+
+        var parr = document.querySelectorAll('p');
+        console.log(parr[0]);
+
+        var boton = document.getElementById('boton');
+        boton.addEventListener('mouseover',function(){
+            console.log('pasaste sobre el boton');
+        });
+
+        boton.addEventListener('click',function(){
+            console.log('me diste click');
+        });
+
+        boton.addEventListener('mouseout',function(){
+            console.log('te alejaste del boton');
+        });
+
+        // var h1 = document.getElementById('titulo');
+        // console.log(h1.innerHTML);
+
+        // h1.innerHTML = 'HOLA DESDE DOM';
+        // h1.style.color = 'red';
+        // h1.style.background = 'black';
+
+
+        // var parrafo = document.getElementById('parrafo');
+        // // parrafo.style.background = "black";
+        
+        // function Cambiar(){
+        //     parrafo.style.color = 'olive';            
+        // }
+
+        // var boton = document.getElementById('boton');
+        // boton.onclick = Cambiar;
+
+
+    </script>
+</body>
+</html>
