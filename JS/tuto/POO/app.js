@@ -23,7 +23,22 @@ class Pelicula{
 
 }
 
+class Serie extends Pelicula{
+
+    constructor(nombre,id,cap){
+        super(nombre,id); //indicamos que ocupara los mismos parametros que su clase padre
+        this.cap = cap;
+    }
+
+    reproducirCapitulo(){
+        return `reproduciendo capitulo...`
+    }
+}
+
 const peliculaUno = new Pelicula('dulce',1);
-const peliculaDos = new Pelicula('ivonne',1);
+const peliculaDos = new Pelicula('ivonne',2);
+const serieUno = new Serie('Breaking Bad',3,12);
+
 console.log(peliculaUno.reproducir());
 console.log(peliculaDos);
+console.log(serieUno);
