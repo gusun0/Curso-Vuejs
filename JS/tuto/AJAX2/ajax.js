@@ -19,11 +19,18 @@ function traerDatos(){
             // console.log(this.responseText);
             
             let datos = JSON.parse(this.responseText);
-            console.log(datos);
+              console.log(datos);
 
-            for (let valor of datos){
-                
-                console.log(valor);
+            let res = document.querySelector('#res');
+            res.innerHTML = ``;
+            // console.log(res);
+
+            for (let valor of datos){                 
+            // console.log(valor.titulo);
+            res.innerHTML += `
+            <td>${valor.titulo}</td>
+            <td>${valor.artista}</td>
+            `
             }
 
         }
