@@ -1,9 +1,9 @@
-console.log('success');
+// console.log('success');
 
 document.querySelector('#boton').addEventListener('click', traerDatos());
 
 function traerDatos(){
-    console.log('desde traer');
+  //  console.log('desde traer');
 
     const xhttp = new XMLHttpRequest();
 
@@ -16,8 +16,15 @@ function traerDatos(){
     xhttp.onreadystatechange = function(){
         // preguntamos por los status
         if(this.readyState == 4 && this.status ==200){
-            console.log(this.responseText);
+            // console.log(this.responseText);
             
+            let datos = JSON.parse(this.responseText);
+            console.log(datos);
+
+            for (let valor of datos){
+                
+                console.log(valor);
+            }
 
         }
 
