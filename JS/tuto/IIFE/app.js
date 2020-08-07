@@ -1,9 +1,14 @@
 // IIFE (INMEDIATELY INVOKED FUNCTION EXPRESSION)
 
 
-(function subscribete(){
-    console.log('subscribete');
-})()
+((nombre = 'xyz') => {
+    console.log(`subscribete ${nombre}`);
+})();
+
+
+// (function subscribete(){
+//     console.log('subscribete');
+// })();
 
 
 // console.log('bien');
@@ -13,3 +18,15 @@
 // }
 
 // subscribete()
+
+
+
+
+
+
+
+
+
+
+
+
