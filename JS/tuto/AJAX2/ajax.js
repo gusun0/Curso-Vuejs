@@ -1,6 +1,6 @@
 // console.log('success');
 
-document.querySelector('#boton').addEventListener('click', traerDatos());
+document.querySelector('#boton').addEventListener('click', traerDatos);
 
 function traerDatos(){
   //  console.log('desde traer');
