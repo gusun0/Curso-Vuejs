@@ -2,12 +2,19 @@
 
 document.querySelector('#dolar').addEventListener('click',function(){
     // ponemos otra funcion para tener parametros
-    obtenerDatos();            
+    obtenerDatos('dolar');            
 });
 
-function obtenerDatos(){
+document.querySelector('#uf').addEventListener('click',function(){
+    // ponemos otra funcion para tener parametros
+    obtenerDatos('uf');            
+});
+
+function obtenerDatos(valor){
     console.log('diste click');
-    let url = `https://mindicador.cl/api/dolar`;
+
+    let url = `https://mindicador.cl/api/${valor}`;
+       
 
     //consultamos con AJAX
     const api = new XMLHttpRequest();
@@ -27,11 +34,16 @@ function obtenerDatos(){
             let resultado = document.querySelector('#resultado');
             resultado.innerHTML = '';
 
+            let i =0;
+
             for (let valor of datos.serie){
                 // console.log(valor);
-                resultado.innerHTML += `<li>${valor.fecha.substr(0,10)} | ${valor.valor}</li>
-                
-                `
+                i++;
+                resultado.innerHTML += `<li>${valor.fecha.substr(0,10)} | ${valor.valor}</li>`
+
+                if(i>10){
+                    break;
+                }
             }
 
         }
