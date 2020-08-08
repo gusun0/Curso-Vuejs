@@ -1,11 +1,7 @@
 Vue.component('contador',{
 
-    template: 
-        `
-       
-        <h1>Hola</h1>
-       
-        `
+    template: '<h1></h1>'
+    
     
 })
 
