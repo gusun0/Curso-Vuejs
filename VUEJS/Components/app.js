@@ -1,3 +1,5 @@
+console.log('probando');
+
 Vue.component('saludo',{
 //tiene que estar en un contenedor lo del template 
     template: `
