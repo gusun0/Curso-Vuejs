@@ -4,7 +4,7 @@ const app = new Vue({
     data: {
         mensaje: 'ciclo de vida de vue'
     },
-
+    // retorna un objeto
     beforeCreate(){
         console.log('beforeCreate');
     },
@@ -25,6 +25,20 @@ const app = new Vue({
     },
     updated(){
         console.log('updated');
+    },
+
+    beforeDestroy(){
+        console.log('beforeDestroy');
+    },
+
+    destroyed(){
+        console.log('destroyed');
+    },
+
+    methods:{
+        destruir(){
+           this.$destroy();
+        }
     }
 
 
