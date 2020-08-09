@@ -4,7 +4,7 @@ Vue.component('hijo',{
     <div>
     <button @click="$store.commit('aumentar')">+</button>
     <h1>numero en componente hijo: {{ $store.state.numero }}</h1>
-    </div>
+    </div>  
     `
 })
 
