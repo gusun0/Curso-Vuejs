@@ -5,13 +5,15 @@ Vue.component('hijo',{
     <div class="p-5 bg-success">
         <h2>Componente hijo: {{numero}}</h2>
         <h4>{{nombreHijo}}</h4>
+        <h5>{{edadHijo}}</h5>
     </div>
     `,
     props: ['numero'],
     
     data(){
         return{
-            nombreHijo: 'Jesus'
+            nombreHijo: 'Jesus',
+            edadHijo: 10
         }
     },
 
@@ -19,5 +21,6 @@ Vue.component('hijo',{
       mounted(){
         // $emit -> emitimos un evento
         this.$emit('nomhijo',this.nombreHijo); 
+        this.$emit('edhijo',this.edadHijo);
     }
 })
