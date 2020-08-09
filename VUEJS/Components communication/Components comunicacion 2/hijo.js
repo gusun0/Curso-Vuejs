@@ -8,6 +8,7 @@ Vue.component('hijo',{
         <h5>{{edadHijo}}</h5>
     </div>
     `,
+    
     props: ['numero'],
     
     data(){
