@@ -25,7 +25,7 @@ Vue.use(VueRouter)
   },
   {
     //para tomar una variable se ponen :, es ruta dinámica
-    path: '/fotos/:id',
+    path: '/fotos/:id?',
     name: 'Fotos',
     component: () => import( '../views/Fotos.vue')
 

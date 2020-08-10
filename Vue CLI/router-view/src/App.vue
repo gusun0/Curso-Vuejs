@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> | 
       <router-link to="/sources">Sources</router-link> |
-       <router-link to="/fotos/:id?">Photos</router-link>
+       <router-link to="/fotos/">Photos</router-link>
     </div>
     <router-view/>
   </div>  
