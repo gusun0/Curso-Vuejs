@@ -1,20 +1,19 @@
 <template>
 <div>
    <h2>Fotos desde views</h2>
-   <Fotos>
-    </Fotos>
+   <XYZ> </XYZ>
 </div>
 </template> 
 
 
 <script>
 
-import Fotografia from '@/components/Fotografia.vue'
+import XYZ from '@/components/Fotografia.vue'
 
 export default {
     name: 'Fotos',
     components:{
-        Fotografia
+        XYZ
     }
     
 }
