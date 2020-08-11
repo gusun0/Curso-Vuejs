@@ -2,7 +2,7 @@
   <div id="app">
     
     <!-- es responsivo -->
-    <b-navbar toggleable="lg" type="dark" variant="danger">
+    <b-navbar toggleable="md" type="dark" variant="success">
 
       <b-container>
 
@@ -13,8 +13,9 @@
         <b-collapse id="nav-collapse" is-nav>
 
             <b-navbar-nav>
-              <b-nav-item to="/" active-class="active" exact>Home</b-nav-item>
-              <b-nav-item to="/about" active-class="active">About</b-nav-item>
+              <b-nav-item to="/" active-class="active" exact>HOME</b-nav-item>
+              <b-nav-item to="/about" active-class="active">ABOUT</b-nav-item>
+              <b-nav-item to="/grid" active-class="active">GRID</b-nav-item>
             </b-navbar-nav>
 
         </b-collapse>
@@ -24,7 +25,14 @@
 
 
     </b-navbar>
+
+
+      <b-container>
+    <!-- todo lo que este en forma dinamica estara dentro de un container -->
     <router-view/>
+
+      </b-container>
+
   </div>
 </template>
 
