@@ -17,6 +17,7 @@
               <b-nav-item to="/about" active-class="active">ABOUT</b-nav-item>
               <b-nav-item to="/grid" active-class="active">GRID</b-nav-item>
               <b-nav-item to="/cards" active-class="active">CARDS</b-nav-item>
+              <b-nav-item to="/form" active-class="active">FORM</b-nav-item>
             </b-navbar-nav>
 
         </b-collapse>
