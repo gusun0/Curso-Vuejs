@@ -38,7 +38,7 @@
     </v-app-bar>
 
     <v-main>
-      <!-- <HelloWorld/> -->
+      
       <!-- router view hace que se visualicen todas las rutas -->
       <router-view>
 
@@ -48,13 +48,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+   
   },
 
   data: () => ({
