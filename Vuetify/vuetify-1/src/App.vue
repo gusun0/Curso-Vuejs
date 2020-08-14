@@ -1,49 +1,38 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+    
+    <!-- pide hacer un componente con esto   -->
+    <v-app-bar app class="warning">
+       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Hola</v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
+      <v-btn class="success">Ingreso</v-btn>
+      <v-btn class="error">Salir</v-btn>
     </v-app-bar>
 
-    <v-main>
-      
-      <!-- router view hace que se visualicen todas las rutas -->
-      <router-view>
+    <v-navigation-drawer app v-model="drawer" temporary dark>
+      <v-layout mt-4 column align-center>
+        <v-flex>
+          <v-avatar>
+            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+          </v-avatar>
+        </v-flex>
+        <v-flex>
+          <p class="white--text mt-3 headline">
+            Juan Perez
 
-      </router-view>
-    </v-main>
+          </p>
+          </v-flex>
+      </v-layout>
+    </v-navigation-drawer>
+
+      <v-main>
+            <!-- router view hace que se visualicen todas las rutas -->
+            <router-view>
+            </router-view>
+      </v-main>
+    
   </v-app>
 </template>
 
@@ -57,8 +46,13 @@ export default {
    
   },
 
-  data: () => ({
+  data() {
+    return{
+      drawer: true
+
+    }
+  }
     //
-  }),
+  
 };
 </script>
