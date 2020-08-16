@@ -47,16 +47,35 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn color="info" text>BOTON</v-btn>
+          <v-btn color="info" text @click="dialog = true">BOTON</v-btn>
         </v-card-actions>
         
       </v-card>
 
       </v-flex>
-
-
-
     </v-layout>
+
+        <!-- dialogo -->
+        <!-- persistent es para que cierre el dialogo usando unicamente el boton que usemos con @click  -->
+    <v-dialog v-model="dialog" width="500" persistent>
+      <v-card>
+        <v-card-title>
+          Este es el titulo
+        </v-card-title>
+        <v-card-text>
+          Lorem, ipsum dolor sit amet consectetur adipisicing.
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-btn @click="dialog=false">cerrar</v-btn>
+
+        </v-card-actions>
+      </v-card>
+
+    </v-dialog>
+
+      <!-- fin de dialogo -->
+
   </v-container>
 </template>
 
@@ -68,6 +87,11 @@ export default {
   name: 'Home',
   components: {
     // HelloWorld
-  }
+  },
+  data(){
+    return{
+      dialog: false
+    }
+  } 
 }
 </script>
