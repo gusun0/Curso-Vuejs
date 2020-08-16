@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12 sm6>
 
@@ -26,7 +26,17 @@
 
       <v-card>
         <!-- cuando tenemos una tarjeta esta dividiod en 3 secciones -->
-        <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"></v-img>
+        <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg">
+        
+        <v-container>
+          <v-layout>
+            <v-flex>
+              <span class="headline white--text">Lorem, ipsum dolor.</span>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        
+        </v-img>
 
         <v-card-title>
           <h2>Lorem, ipsum dolor.</h2>
