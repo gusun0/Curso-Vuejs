@@ -9,7 +9,7 @@
                         <v-icon left>mdi-label</v-icon>
                         {{item.titulo}}
                         </v-chip>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, doloribus.</p>
+                        <p>{{item.descripcion}}</p>
                         <v-btn color="warning" class="ml-0" @click="editar(index)">Editar</v-btn>
                         <v-btn color="error" @click="eliminarTareas(item.id)">Eliminar</v-btn>
                     </v-card-text>
@@ -42,7 +42,7 @@
                 </v-card>
             </v-flex>
 
-              <v-flex md6 v-if=!formAgregar>
+              <v-flex md6 v-if="!formAgregar">
                 <v-card class="mb-3 pa-3" >
                     <v-form @submit.prevent="editarTareas">
                         <v-text-field label="titulo de tarea" v-model="titulo"></v-text-field>
@@ -97,11 +97,11 @@ export default {
     },
     methods:{
         agregarTareas(){
-            console.log(this.titulo, this.descripcion);
+            // console.log(this.titulo, this.descripcion);
             if(this.titulo === '' || this.descripcion === ''){
                 this.snackbar = true
                 this.mensaje = "llena todos los campos"
-                console.log('vacio');
+                // console.log('vacio');
             }else{
                 this.listaTareas.push({
                     id: Date.now(),
@@ -116,7 +116,7 @@ export default {
         },
 
         eliminarTareas(id){
-            console.log(id);
+            // console.log(id);
             this.listaTareas = this.listaTareas.filter(e => e.id != id)
         },
         
@@ -128,8 +128,10 @@ export default {
         },
 
         editarTareas(){
+            console.log(this.descripcion);
             this.listaTareas[this.indexTarea].titulo = this.titulo
             this.listaTareas[this.indexTarea].descripcion = this.descripcion
+            
             this.formAgregar = true
             this.titulo = ''
             this.descripcion = ''
