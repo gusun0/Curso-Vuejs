@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/firefox.png
 heroText: Hola
-tagline: DULCABB
+tagline: EJEMPLO
 actionText: Get Started →
 actionLink: /guia/
 features:
