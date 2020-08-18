@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Hello VuePress',
+  title: 'Hola',
   description: 'Just playing around',
 
   themeConfig: {
@@ -7,7 +7,14 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Guia', link: '/guia/' },
       { text: 'External', link: 'https://google.com' }
-    ]
-  }
+    ],
 
+    sidebar: {
+      '/guia/':[
+        '',
+        'vuepress-guia'
+      ]
+    }
+    
+  }
 }
